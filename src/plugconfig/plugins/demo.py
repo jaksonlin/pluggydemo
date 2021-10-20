@@ -28,6 +28,7 @@ class DemoPlugin(object):
             dict: {"addr":str, "payload":dict, "header":dict}
         """
         result = {"addr":addr, "payload":payload, "header":header}
+        print(result)
         return result
         
     @hookimpl(tryfirst=True)

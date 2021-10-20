@@ -4,12 +4,12 @@ from pluggy import HookimplMarker
 from pluggy import HookspecMarker
 from pluggy import PluginManager
 
-project_name = "pconfigs"
+project_name = "plugconfig"
 
 hookimpl = HookimplMarker(project_name)
 hookspec = HookspecMarker(project_name)
 
-builtin_plugins:List[str] = [] # these are not historic plugins
+builtin_plugins:List[str] = ["demo"] # these are not historic plugins
 
 class BasedPluginManager(PluginManager):
 

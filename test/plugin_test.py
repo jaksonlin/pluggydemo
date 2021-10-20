@@ -22,7 +22,7 @@ class TestPlugin1(object):
 
 def test_last_update_of_payload():
     config = get_config()
-    config.register(StatusPrinter(), "demo")
+    config.register(StatusPrinter(), "demo1")
     config.register(TestPlugin1(), "demo2")
     result = config.hook.api_post_pre_hook(addr="/1/1/2/2/", payload={"1234":"123"}, header={})
     assert result[-1]["addr"].endswith('v2')
